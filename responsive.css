@@ -1,0 +1,118 @@
+/* Bounded desktop/tablet content; backgrounds may span the viewport. */
+@media(min-width:761px){
+ :root{--site-max:1440px;--site-gutter:24px;--site-inset:36px;--content-max:1368px;--wide-inset:max(36px,calc((100% - var(--content-max))/2));--section-space:64px;--panel-space:56px}
+ #main>section,.contact.section,.footer{width:calc(100% - 48px);max-width:1440px;margin-inline:auto}
+ #main>.section,.footer{padding-inline:36px}
+ .site-header,.home-page .site-header{padding-inline:max(36px,calc((100% - 1368px)/2));height:88px}
+ .site-header nav{font-size:13px;gap:28px}.site-header .button{font-size:13px}
+ #main>.services,#main>.difference,#main>.pricing,#main.about-page>.about-offerings,.contact.section{width:100%;max-width:none;padding-inline:var(--wide-inset);border-radius:0}
+ #main>.approach{width:100%;max-width:none;padding-inline:0}
+ #main .journey-board{padding-inline:var(--wide-inset);border-radius:0;border-inline:0}
+ #main .outcomes-showcase{width:calc(100% - 72px);max-width:1368px;margin-inline:auto}
+ #main>.feature-stories{padding-inline:0;gap:24px}
+ #main>.about{padding-inline:0;gap:40px}
+ #main>.about>div:not(.about-art){padding-right:36px}
+ #main h2,#main.about-page h2{font-size:clamp(36px,3.7vw,56px);line-height:1.16}
+ #main h3{font-size:clamp(21px,2vw,28px);line-height:1.3}
+ #main .difference>h2{white-space:normal;font-size:clamp(36px,3.7vw,56px)}
+ #main h1,#main h2,#main h3{overflow-wrap:break-word}
+ #main>.reference-hero{height:680px;min-height:0;max-height:680px}
+ #main .reference-hero-copy{left:36px;right:36px;top:50px}
+ #main .reference-hero h1,#main .hero-slide .reference-hero-copy h2{font-size:clamp(44px,4.3vw,68px);line-height:1.12;max-width:1000px;margin-inline:auto}
+ #main .hero-introduction{font-size:17px;line-height:1.6;max-width:480px}
+ #main .headline-rule{max-width:200px}
+ #main .story-card{height:560px;min-height:0}
+ #main .story-copy,#main .story-lime .story-copy{padding:30px 26px}
+ #main .story-copy h2,#main .story-bottom h2{font-size:24px;line-height:1.3}
+ #main .story-photo{min-height:240px}
+ #main .story-lime .story-photo{min-height:0}
+ #main .service-card{min-height:500px;padding:26px}
+ #main .service-card h3{font-size:28px}
+ #main .service-card p{font-size:14px;line-height:1.65}
+ #main .service-card .eyebrow{font-size:9px}
+ #main .service-card .card-link{font-size:12px}
+ #main .service-grid{gap:22px}
+ #main .price-card{padding:32px}
+ #main .benefits article,#main .scope-grid article{padding:28px}
+ #main .benefits p,#main .scope-grid p{font-size:15px;line-height:1.75}
+ #main .journey-board .steps h3{font-size:20px}
+ #main .journey-board .steps p{font-size:14px}
+ #main .detail-hero{padding:56px 48px;min-height:600px}
+ #main .detail-hero h1{font-size:clamp(38px,4vw,60px)}
+ #main .detail-hero .detail-intro h2{font-size:24px}
+ #main .detail-hero .detail-intro p{font-size:16px}
+ #main .training-hero-copy{padding:48px}
+ #main .training-hero h1{font-size:clamp(38px,4vw,60px)}
+ #main .training-hero-visual{min-height:440px}
+ #main>section.course-hero{padding:48px 36px;gap:40px}
+ #main .course-hero h1{font-size:clamp(34px,3.5vw,52px)}
+ #main .course-reading h2{font-size:36px}
+ #main .course-card h3{font-size:24px}
+ #main.about-page .about-hero{width:calc(100% - 48px);max-width:1440px;margin-inline:auto;min-height:560px}
+ #main.about-page .about-hero-copy{padding:48px}
+ #main.about-page .about-hero h1{font-size:clamp(38px,4vw,60px)}
+ #main.about-page .about-hero-image{min-height:560px}
+ #main.about-page .section{padding-block:64px}
+ #main.about-page .about-values-heading{max-width:800px}
+ #main.about-page .about-metrics strong{font-size:64px}
+ #main.about-page .about-value,#main.about-page .about-offering{padding:32px}
+ .contact.section{gap:64px;padding-block:56px}
+ .contact h2{font-size:clamp(48px,5vw,72px);line-height:1.08}
+ .contact .contact-details>a:not(.text-link){font-size:clamp(24px,2.5vw,36px);overflow-wrap:anywhere}
+ .contact p{font-size:16px;line-height:1.7}
+ #main :is(.section-heading,.industry-layout,.course-body,.scope-grid,.price-grid,.service-grid,.benefits)>*{min-width:0}
+}
+@media(min-width:761px) and (max-width:1100px){
+ :root{--section-space:48px;--panel-space:40px;--wide-inset:28px}
+ #main>.section,.footer{padding-inline:28px}
+ .site-header,.home-page .site-header{padding-inline:28px}
+ #main>.feature-stories{padding-inline:0;gap:18px}
+ #main .story-card{height:520px}
+ #main .story-copy,#main .story-lime .story-copy{padding:24px 20px}
+ #main .story-copy h2,#main .story-bottom h2{font-size:21px}
+ #main .story-bottom{flex-wrap:wrap}
+ #main .story-photo{min-height:220px}
+ #main .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #main .service-card{min-height:440px}
+ #main .benefits{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #main .price-grid{grid-template-columns:minmax(0,1fr)}
+ #main>.about{gap:28px}#main>.about>div:not(.about-art){padding-right:28px}
+ #main>.reference-hero{height:620px;max-height:620px}
+ #main .detail-hero{padding:40px 28px}
+ #main .training-hero-copy,#main.about-page .about-hero-copy{padding:32px 28px}
+ #main .training-hero h1,#main.about-page .about-hero h1{font-size:40px}
+ #main .course-hero h1{font-size:36px}
+ #main.about-page .about-offering-grid{grid-template-columns:minmax(0,1fr)}
+ #main.about-page .about-hero-image{min-height:500px}
+ #main .journey-board .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+ #main .journey-board .steps article{padding:0 20px 16px 0}
+ #main .journey-board .steps article:before{display:none}
+ #main .journey-board .steps h3{min-height:0;margin-top:20px}
+ .contact.section{gap:32px}
+ .contact h2{font-size:48px}
+}
+/* Match full-width panel insets to the padded, bounded white sections. */
+@media(min-width:761px){
+ :root{--wide-inset:max(60px,calc((100% - 1368px)/2))}
+ .site-header,.home-page .site-header{padding-inline:max(60px,calc((100% - 1368px)/2))}
+ #main .outcomes-showcase{width:calc(100% - 120px)}
+}
+@media(min-width:761px) and (max-width:1100px){
+ :root{--wide-inset:52px}
+ .site-header,.home-page .site-header{padding-inline:52px}
+ #main .outcomes-showcase{width:calc(100% - 104px)}
+ #main>.services,#main>.difference,#main>.pricing,#main.about-page>.about-offerings{padding-inline:var(--wide-inset)}
+}
+@media(min-width:761px){
+ #main .course-enquiry h2{font-size:28px;line-height:1.25}
+}
+@media(min-width:761px) and (max-width:1100px){
+ #main .course-catalogue .section-heading{display:block}
+ #main .course-catalogue .section-heading h2{max-width:650px}
+ #main .course-catalogue .section-heading>p{max-width:580px;margin-top:20px}
+}
+@media(min-width:761px) and (max-width:950px){
+ #main .course-body{grid-template-columns:minmax(0,1fr);gap:36px}
+ #main .course-enquiry{max-width:100%}
+ #main .course-enquiry .button{width:auto;min-width:220px}
+}
