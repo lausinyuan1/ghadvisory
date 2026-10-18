@@ -1,0 +1,31 @@
+/* A phone-only page; wider screens use the existing desktop contact section. */
+.contact-page{display:none}
+@media(max-width:760px){
+ #main.contact-page{display:block}
+ #main.contact-page>.section{padding:28px 22px;margin:0;width:100%}
+ #main.contact-page .contact-intro{padding-top:32px;padding-bottom:24px}
+ #main.contact-page .contact-intro .eyebrow{margin-bottom:14px}
+ #main.contact-page h1{margin:0 0 16px}
+ #main.contact-page h2{margin:0 0 14px}
+ #main.contact-page p{color:#4a5b73;margin:0 0 20px}
+ #main.contact-page .contact-intro p{margin:0}
+ #main.contact-page .contact-form-section{padding-top:0;padding-bottom:8px}
+ .enquiry-panel{background:#eef6ff;border:1px solid #d5e3f3;border-radius:18px;padding:22px 18px}
+ .enquiry-field{display:flex;flex-direction:column;gap:8px;margin-bottom:18px;min-width:0}
+ .enquiry-field label{font-size:12px;font-weight:500;line-height:1.5;color:#003b8e}
+ .enquiry-field label span{font-size:11px;font-weight:400;color:#607086}
+ .enquiry-field :is(input,select,textarea){display:block;box-sizing:border-box;width:100%;min-width:0;max-width:100%;min-height:48px;padding:12px;font:400 16px/1.5 'Poppins',Arial,sans-serif;color:#003b8e;background:#fff;border:1px solid #cbdcee;border-radius:10px;box-shadow:none}
+ .enquiry-field textarea{resize:vertical;min-height:140px}
+ .enquiry-field :is(input,select,textarea):focus{outline:2px solid #0078d4;outline-offset:2px;border-color:#0078d4}
+ #main.contact-page .email-note,#main.contact-page #enquiry-status{font-size:12px;line-height:1.6}
+ #main.contact-page #enquiry-status:empty{display:none}
+ #main.contact-page #enquiry-status{margin-top:16px;margin-bottom:0}
+ #enquiry-form .button{width:100%;justify-content:space-between;cursor:pointer;font-family:inherit}
+ #enquiry-form svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.4}
+ .contact-information dl{margin:24px 0}
+ .contact-information dl>div{padding:18px 0;border-bottom:1px solid #d5e3f3}
+ .contact-information dt{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:500;color:#003b8e;margin-bottom:8px}
+ .contact-information dt svg{width:18px;height:18px;fill:none;stroke:#0078d4;stroke-width:1.5;flex-shrink:0}
+ .contact-information dd{font-size:14px;line-height:1.7;margin:0 0 0 28px;color:#4a5b73;overflow-wrap:anywhere}
+ .contact-information dd a{color:#003b8e}
+}

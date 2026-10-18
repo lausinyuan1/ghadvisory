@@ -412,22 +412,9 @@ if ('IntersectionObserver' in window) {
  window.addEventListener('beforeprint',()=>{played=true;observer?.disconnect();finish();});
 })();
 
-// Preserve contact anchor links when the phone footer replaces the contact panel.
+// Footer contact link points to the responsive contact section when present.
 (() => {
- const panel=document.querySelector('.contact.section');
- const contact=document.querySelector('.mobile-footer');
- if(!panel||!contact)return;
- const mobile=matchMedia('(max-width:760px)');
  document.querySelectorAll('[data-footer-year]').forEach(e=>e.textContent=new Date().getFullYear());
- function revealContact(){
-  if(mobile.matches&&location.hash==='#contact'){
-   requestAnimationFrame(()=>contact.scrollIntoView({block:'start'}));
-  }
- }
- function sync(){panel.id=mobile.matches?'desktop-contact':'contact';contact.id=mobile.matches?'contact':'mobile-contact';revealContact();}
- document.addEventListener('click',event=>{
-  const link=event.target.closest('a[href="#contact"]');
-  if(link&&mobile.matches){requestAnimationFrame(()=>contact.scrollIntoView({block:'start'}));}
- });
- mobile.addEventListener('change',sync);addEventListener('hashchange',revealContact);sync();
+ const footer=document.querySelector('.mobile-footer-nav');
+ if(footer){const link=document.createElement('a');link.className='mobile-footer-row';link.href=document.querySelector('.contact-redesign')?'#contact':'contact.html';link.textContent='Contact Us';footer.append(link)}
 })();
