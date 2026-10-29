@@ -37,13 +37,9 @@
    };
    Object.entries(props).forEach(([key,value])=>card.style.setProperty(key,value));
    const photo=card.querySelector('.service-photo');
-   // Crop a single quadrant of the original contact sheet without stretching it.
-   const quadrantWidth=Math.max(photoWidth,photoHeight*1.5);
-   photo.style.backgroundSize=`${quadrantWidth*2}px ${quadrantWidth/1.5*2}px`;
-   const image=photo.querySelector('img'),quadrantHeight=quadrantWidth/1.5;
-   const right=image.classList.contains('top-right')||image.classList.contains('bottom-right');
-   const bottom=image.classList.contains('bottom-left')||image.classList.contains('bottom-right');
-   photo.style.backgroundPosition=`${(photoWidth-quadrantWidth)/2-(right?quadrantWidth:0)}px ${(photoHeight-quadrantHeight)/2-(bottom?quadrantHeight:0)}px`;
+   // Each service now has its own full-frame photo; preserve aspect ratio at every stage.
+   photo.style.backgroundSize='cover';
+   photo.style.backgroundPosition='center';
    card.style.pointerEvents=entry*(1-exit)>.5?'auto':'none';
    const cue=grid.querySelector(`[data-scene="${i}"]`);
    cue.style.opacity=intro;
@@ -64,7 +60,7 @@
     title.before(visual);visual.append(photo,title);
     const image=photo.querySelector('img');
     photo.style.backgroundImage=`url("${image.getAttribute('src')}")`;
-    photo.style.backgroundPosition=`${image.classList.contains('top-right')||image.classList.contains('bottom-right')?'right':'left'} ${image.classList.contains('bottom-left')||image.classList.contains('bottom-right')?'bottom':'top'}`;
+    photo.style.backgroundPosition='center';
     const intro=card.querySelector('p:not(.eyebrow)').cloneNode(true);
     intro.className='service-scene-intro';intro.setAttribute('aria-hidden','true');card.append(intro);
     const label=card.querySelector('.eyebrow').cloneNode(true);label.className='service-scene-label';label.setAttribute('aria-hidden','true');card.append(label);
